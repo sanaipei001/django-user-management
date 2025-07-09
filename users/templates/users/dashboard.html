@@ -1,0 +1,17 @@
+{% extends 'users/base.html' %}
+{% block content %}
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm text-center">
+                <div class="card-body">
+                    <h2 class="card-title mb-4">Welcome, {{ user.username }}! 🎉</h2>
+                    <p class="lead">Your email is verified, and you’re ready to explore!</p>
+                    <a href="{% url 'profile' %}" class="btn btn-primary">Update Profile</a>
+                    <a href="{% url 'logout' %}" class="btn btn-outline-primary">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
