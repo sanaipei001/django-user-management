@@ -1,12 +1,10 @@
-# django-user-management
-# django-user-management
- Django User Management System 
+Django User Management System 
 
 Welcome to the Django User Management System, a sleek web app built with Django 5.2.4 and Python 3.13.2!  Featuring a blue sticky navbar and fixed footer, this app offers user registration, real email verification, a welcoming dashboard, profile updates, and secure login/logout. Deployed on Render’s free tier, it’s perfect for learning Django with a modern Bootstrap 5 UI. Clone it and make it yours! 
 
 Live at insert Render URL here. Dev.to article: [insert Dev.to URL here].
 
- Features
+Features
 
 
 
@@ -49,19 +47,15 @@ Prerequisites
 
 
 
-Python 3.13.2 
+(i)Python 3.13.2 
 
+(ii)Django 5.2.4
 
+(iii)Git 
 
-Git 
+(iv)Virtualenv 
 
-
-
-Virtualenv 
-
-
-
-A free Render account 
+(v)A free Render account 
 
 Clone and Set Up
 
@@ -126,3 +120,12 @@ Visit the link (e.g., http://localhost:8000/verify-email/<token>/), click “I�
  Running Tests
 
 python manage.py test
+
+![Screenshot 2025-07-07 233208](https://github.com/user-attachments/assets/ea31a83e-5aba-4953-8b00-bdec6b81e7e2)
+
+![Screenshot 2025-07-07 232855](https://github.com/user-attachments/assets/6ac748f4-9e1a-467a-a2ff-7e63c8faf211)
+
+![Screenshot 2025-07-07 232646](https://github.com/user-attachments/assets/4ffb7203-e02a-4b68-a72d-2979c550c1dd)
+
+
+
