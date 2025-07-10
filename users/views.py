@@ -24,7 +24,7 @@ def register(request):
             )
             login(request, user)
             messages.success(request, 'Registration successful! Check your email to verify.')
-            return redirect('verify_email')
+            return redirect('verify_email', token=token)  # Pass token to URL
     else:
         form = RegistrationForm()
     return render(request, 'users/register.html', {'form': form})
@@ -43,14 +43,14 @@ def verify_email(request, token):
 def dashboard(request):
     if not request.user.userprofile.is_verified:
         messages.warning(request, 'Please verify your email to access the dashboard.')
-        return redirect('verify_email')
+        return redirect('verify_email', token=request.user.userprofile.verification_token)
     return render(request, 'users/dashboard.html')
 
 @login_required
 def profile(request):
     if not request.user.userprofile.is_verified:
         messages.warning(request, 'Please verify your email to access your profile.')
-        return redirect('verify_email')
+        return redirect('verify_email', token=request.user.userprofile.verification_token)
     if request.method == 'POST':
         user_form = UserUpdateForm(request.POST, instance=request.user)
         profile_form = ProfileForm(request.POST, instance=request.user.userprofile)
